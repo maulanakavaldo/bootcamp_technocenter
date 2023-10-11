@@ -1,0 +1,51 @@
+<!------------------------------------------------------------------------------------------------------------
+= Bootcamp Berijalan Techno Center | Batch 8
+= Day 1 | HOMEWORK - TIME CONVERSION
+= 25 September 2023
+-------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Conversion</title>
+</head>
+<body>
+    <h1>Membuat Function Konversi Waktu dengan Javascript</h1>
+    <hr>
+    <h2>Time Conversion</h1>
+    <p>Masukkan waktu dalam format 12 jam (Misal: 12:01:00 PM / 12:01:00 AM) dan klik tombol konversi ke dalam format 24 jam:</p>
+    
+    <input type="text" id="timeInput" placeholder="12:01:00 PM">
+    <button onclick="convertTime()">Konversi</button>
+    
+    <p id="result"></p>
+
+    <script>
+        function timeConversion(time) {
+            const isAM = time.includes('AM');
+            let [hours, minutes, seconds] = time.slice(0, 8).split(':').map(Number);
+
+            if (isAM) {
+                hours = (hours === 12) ? 0 : hours;
+            } else {
+                hours = (hours === 12) ? 12 : hours + 12;
+            }
+
+            return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        function convertTime() {
+            const timeInput = document.getElementById('timeInput').value;
+            const result = document.getElementById('result');
+            
+            if (timeInput) {
+                const convertedTime = timeConversion(timeInput);
+                result.textContent = `Converted time: ${convertedTime} WIB`;
+            } else {
+                result.textContent = 'Masukkan waktu yang valid.';
+            }
+        }
+    </script>
+</body>
+</html>

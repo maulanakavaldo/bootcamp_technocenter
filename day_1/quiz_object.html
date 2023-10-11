@@ -1,0 +1,74 @@
+<!------------------------------------------------------------------------------------------------------------
+= Bootcamp Berijalan Techno Center | Batch 8
+= Day 1 | QUIZ OBJECT
+= 25 September 2023
+= https://mahmadakbar.notion.site/mahmadakbar/JavaScript-Fundamental-s-3086796f1ee84c54980d60b974989129
+-------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+</body>
+
+    <script>
+        // --------------------
+        // Bagian 1 dan 2
+        // --------------------
+
+        let person = {
+            npk : 'A3050',
+            nama: "Maulana Kavaldo",
+            alamat: 'Yogyakarta',
+            'tanggal lahir': '1999-07-30',
+            project: ["B2B ACCME", "Maintenace BJJ"],
+            produktivitas: [100, 100, 100]
+        }
+
+        console.log(person)
+
+        // --------------------
+        // Bagian 3
+        // --------------------
+
+        // 1. Seiring berjalannya waktu person mendapat tambahan 2 project baru yaitu 
+        //    "Setri Kanan Mobile" dan "Fixing CMS".
+
+        person.project.push("Setri Kanan Mobile","Fixing CMS")
+
+        console.log(person)
+
+        // 2. Project "Maintenace BJJ" di hapus dari list karena sudah selesai.
+        
+        // delete person.project[1]
+        person.project.splice(1,1)
+
+        console.log(person)
+
+        //3. Pada bagian produktivitas jika diketahui dalam 1 bulan adalah 30 hari, bulan pertama karyawan 
+        //   tidak pernah absen atau izin, pada bulan ke dua karyawan mengajukan cuti selama 5 hari, dan pada bulan 
+        //   ke tiga baru berjalan 14 hari. Update dan hitung array produktivitas berdasarkan kondisi tersebut.
+        
+        // Update array person.produktivitas
+
+        // let nilai1 = (25 / 30) * 100;
+        // let nilai2 = (14 / 30) * 100;
+
+        // person.produktivitas[1] = nilai1;
+        // person.produktivitas[2] = nilai2;
+
+        person.produktivitas[1] = 25/30 * 100
+        person.produktivitas[2] = 14/30 * 100
+
+        console.log(person)
+
+    </script>
+
+</html>

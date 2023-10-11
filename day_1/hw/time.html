@@ -1,0 +1,39 @@
+<!------------------------------------------------------------------------------------------------------------
+= Bootcamp Berijalan Techno Center | Batch 8
+= Day 1 | HOMEWORK
+= 25 September 2023
+-------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Buka console (Inspect Elemen)</h1>
+</body>
+
+  <script>
+    function timeConversion(time) {
+      const isAM = time.includes('AM');
+      let [hours, minutes, seconds] = time.slice(0, 8).split(':').map(Number);
+
+      if (isAM) {
+        hours = (hours === 12) ? 0 : hours;
+      } else {
+        hours = (hours === 12) ? 12 : hours + 12;
+      }
+
+      return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+  // Contoh penggunaan fungsi:
+  console.log(timeConversion('12:01:00PM')); // Output yang diharapkan: '12:01:00'
+  console.log(timeConversion('12:01:00AM')); // Output yang diharapkan: '00:01:00'
+
+  </script>
+
+</html>

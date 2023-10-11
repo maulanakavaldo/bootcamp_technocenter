@@ -1,0 +1,59 @@
+<!------------------------------------------------------------------------------------------------------------
+= Bootcamp Berijalan Techno Center | Batch 8
+= Day 1 | HOMEWORK - UANG KEMBALIAN
+= 25 September 2023
+-------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Problem Solve</h2>
+    <hr>
+    <p>Lia memiliki uang sebesar 100.000. Dia ingin membelanjakan es krim yang harganya 13.000. Jika pedagang memiliki uang dengan pecahan 50.000, 20.000, 10.000, 5.000, 2.000 dan 1.000 dan uang kembalian yang diserahkan harus pecahan terbesar terlebih dahulu maka berapa saja pecahan kembalian yang akan di terima oleh Lia. Simpan ke dalam array.</p>
+
+    <p>Contoh:</p>
+    <ul>
+        <li>Uang Lia => 100.000</li>
+        <li>Beli Es Krim => 13.000 </li>
+        <li>Kembalian => 87.000 </li> 
+        <li>Kembaliannya adalah = [50.000, 20.000, 10.000, 5.000, 2.000]</li>
+    </ul>
+
+    <h3>Result:</h3>
+    <hr>
+    <p>Kembaliannya adalah: <span id="hasilKembalian"></span></p>
+</body>
+
+    <script>
+        function hitungKembalian(totalUang, hargaEsKrim) {
+        const pecahanUang = [50000, 20000, 10000, 5000, 2000, 1000];
+        let kembalian = totalUang - hargaEsKrim;
+        const kembalianArray = [];
+
+        for (let i = 0; i < pecahanUang.length; i++) {
+            while (kembalian >= pecahanUang[i]) {
+            kembalianArray.push(pecahanUang[i]);
+            kembalian -= pecahanUang[i];
+            }
+        }
+
+        return kembalianArray;
+        }
+
+        const totalUangLia = 100000;
+        const hargaEsKrim = 13000;
+
+        const kembalianLia = hitungKembalian(totalUangLia, hargaEsKrim);
+        console.log("Kembaliannya adalah:", kembalianLia);
+
+        // Mengakses elemen HTML dengan ID "hasilKembalian" dan mengatur isinya
+        const hasilKembalianElement = document.getElementById("hasilKembalian");
+        hasilKembalianElement.textContent = kembalianLia.join(", ");
+    </script>
+
+</html>
