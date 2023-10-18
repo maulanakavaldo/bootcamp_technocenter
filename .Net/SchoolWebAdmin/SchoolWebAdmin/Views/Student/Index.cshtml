@@ -1,0 +1,49 @@
+﻿@model List<SchoolWebAdmin.Models.StudentTable>
+@{
+    ViewData["Title"] = "Student";
+}
+<head>
+    <title>Student</title>
+</head>
+
+<body>
+    <div class="text-center">
+        <h2>Student List</h2>
+    </div>
+    <div>
+        <a asp-asp-controller="Student" asp-action="AddStudent"> Add new Student</a>
+    </div>
+    <div class="student-list">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Age</th>
+                    <th>Semester</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.StudentId</td>
+                        <td>@student.Name</td>
+                        <td>@(student.Department != null ? student.Department.DepartmentName : "N/A")</td>
+                        <td>@student.Age</td>
+                        <td>@student.Semester</td>
+                        <td>
+                            <a asp-asp-controller="Student" asp-route-id="@student.StudentId" asp-action="UpdateStudent">Update</a>
+                            <a asp-asp-controller="Student" asp-route-id="@student.StudentId" asp-action="DeleteStudent">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+

@@ -1,0 +1,27 @@
+﻿@model SchoolWebAdmin.Models.StudentTable
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Add Student";
+}
+
+<h1>Add Student</h1>
+<form method="post" asp-controller="Student" asp-action="AddStudent" class="mt-5">
+    <input type="hidden" asp-for="StudentId"/>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <label class="form-label">DepartmentName</label>
+             <select asp-for="DepartmentId" class="form-control">
+                <option value="">Select Department</option>
+                @foreach (var department in ViewBag.Departments)
+                {
+                    <option value="@department.DepartmentId">@department.DepartmentName</option>
+                }
+             </select>
+        <label class="form-label">Semester</label>
+        <input type="text" class="form-control" asp-for="Semester" />
+        <label class="form-label">Age</label>
+        <input type="text" class="form-control" asp-for="Age" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,43 @@
+﻿@model SchoolWebAdmin.Models.StudentTable
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Add Student";
+}
+
+<h1>Add Student</h1>
+<form method="post" asp-controller="Student" asp-action="UpdateStudent" class="mt-5">
+    <input type="hidden" asp-for="StudentId" />
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <label class="form-label">DepartmentName</label>
+        <select asp-for="DepartmentId" class="form-control">
+            <option value="">Select Department</option>
+            @foreach (var department in ViewBag.Departments)
+            {
+                <option value="@department.DepartmentId">@department.DepartmentName</option>
+            }
+        </select>
+        <label class="form-label">Age</label>
+        <input type="text" class="form-control" asp-for="Age" />
+        <label class="form-label">Semester</label>
+        <input type="text" class="form-control" asp-for="Semester" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <script>
+        // set nilai sebelumnya
+        var previousName = '@Model.Name';
+        var previousDepartmentId = '@Model.DepartmentId';
+        var previousAge = '@Model.Age';
+        var previousSemester = '@Model.Semester';
+
+        // Isi nilai formulir dengan nilai sebelumnya 
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelector('[name="Name"]').value = previousName;
+            document.querySelector('[name="DepartmentId"]').value = previousDepartmentId;
+            document.querySelector('[name="Semester"]').value = previousSemester;
+            document.querySelector('[name="Age"]').value = previousAge;
+        });
+    </script>
+</form>

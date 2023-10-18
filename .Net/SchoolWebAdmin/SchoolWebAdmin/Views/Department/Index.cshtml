@@ -1,0 +1,43 @@
+﻿@model List<SchoolWebAdmin.Models.DepartmentTable>
+@{
+    ViewData["Title"] = "Department";
+}
+<head>
+    <title>Department</title>
+</head>
+
+<body>
+    <div class="text-center">
+    <h2>Department List</h2>
+    </div>
+    <div>
+        <a asp-asp-controller="Department" asp-action="AddDepartment"> Add new Department</a>
+    </div>
+    <div class="student-list">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Department ID</th>
+                    <th>Department Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var department in Model)
+                {
+                    <tr>
+                        <td>@department.DepartmentId</td>
+                        <td>@department.DepartmentName</td>
+                        <td>
+                            <a asp-asp-controller="Department" asp-route-id="@department.DepartmentId" asp-action="UpdateDepartment"> Update</a>
+                            <a asp-asp-controller="Department" asp-route-id="@department.DepartmentId" asp-action="DeleteDepartment"> Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+

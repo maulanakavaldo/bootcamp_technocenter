@@ -1,0 +1,23 @@
+﻿@model SchoolWebAdmin.Models.DepartmentTable
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Update Department";
+}
+
+<h1>Update Department</h1>
+<form method="post" asp-controller="Department" asp-action="UpdateDepartment" class="mt-5">
+    <input type="hidden" asp-for="DepartmentId"/>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="DepartmentName" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <script>
+        var previousName = '@Model.DepartmentName';
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelector('[name="DepartmentName"]').value = previousName;
+        });
+    </script>
+</form>
