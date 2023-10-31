@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using SchoolWebAdmin.Models;
 using SchoolWebAdmin.Services.Interfaces;
+
 
 namespace SchoolWebAdmin.Controllers.Department
 {
@@ -14,7 +14,8 @@ namespace SchoolWebAdmin.Controllers.Department
             _department = department;
         }
 
-        public async Task<IActionResult> Index(){
+        public async Task<IActionResult> Index()
+        {
             List<DepartmentTable> departments = await _department.GetDepartementAsync();
             return View(departments);
         }
@@ -23,6 +24,12 @@ namespace SchoolWebAdmin.Controllers.Department
         public async Task<IActionResult> AddDepartment()
         {
             return View();
+        }
+
+        public IActionResult AddDepartment(DepartmentTable department)
+        {
+            _department.AddDepartment(department);
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -38,11 +45,6 @@ namespace SchoolWebAdmin.Controllers.Department
             return View(department);
         }
 
-        public IActionResult AddDepartment(DepartmentTable department)
-        {
-            _department.AddDepartment(department);
-            return RedirectToAction("Index");
-        }
         public IActionResult UpdateDepartment(int id, string departmentName)
         {
             _department.UpdateDepartment(id, departmentName);

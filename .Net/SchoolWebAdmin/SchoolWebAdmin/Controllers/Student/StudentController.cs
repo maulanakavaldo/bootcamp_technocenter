@@ -15,7 +15,7 @@ namespace SchoolWebAdmin.Controllers.Student
             _student = student;
             _dbContext = dbContext;
         }
-
+        //[HttpGet]
         public async Task<IActionResult> Index()
         {
             List<StudentTable> students = await _student.GetStudentAsync();
@@ -34,7 +34,7 @@ namespace SchoolWebAdmin.Controllers.Student
         [HttpPost]
         public IActionResult AddStudent(StudentTable student)
         {
-            _student.AddStudent(student);
+            _student.AddStudentAsync(student);
             return RedirectToAction("Index");
         }
 
@@ -58,13 +58,13 @@ namespace SchoolWebAdmin.Controllers.Student
 
         public IActionResult UpdateStudent(int id, string Name, int departmentID, int age, int semester)
         {
-            _student.UpdateStudent(id, Name, departmentID, age, semester);
+            _student.UpdateStudentAsync(id, Name, departmentID, age, semester);
             return RedirectToAction("Index");
         }
 
         public IActionResult DeleteStudent(int id)
         {
-            _student.DeleteStudent(id);
+            _student.DeleteStudentAsync(id);
             return RedirectToAction("Index");
         }
 

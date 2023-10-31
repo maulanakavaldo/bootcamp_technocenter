@@ -1,0 +1,41 @@
+curl --location 'https://be-rmy.dev.berijalan.co.id/rest/v1/auth/register' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "doSendRegister": {
+    "name": "Admin Mobile",
+    "email": "admin2@mobile.com",
+    "phoneNumber": "1123222323213",
+    "nik": "12345789",
+    "password": "Passowrd1"
+  }
+}'
+
+curl --location 'https://be-rmy.dev.berijalan.co.id/rest/v1/auth/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "email": "admin@mobile.com",
+  "password": "Password1"
+}'
+
+Token git:
+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
+
+
+
+𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗔𝗧𝗜𝗢𝗡:
+
+     REACT :   - npx create-react-app [nama-proyek]
+                      - npm install react-icons --save
+                      - npm install axios --save
+                      - npm install redux react-redux --save
+                      - npm install @react-native-async-storage/async-storage --save
+
+
+Pretest:
+https://carbon.now.sh/iwpTpxsIABB45B591v0U
+
+Materi:
+https://mahmadakbar.notion.site/mahmadakbar/Bootcamp-React-Native-dan-Next-JS-Berijalan-0b9a2f0cbe18420ea17b55849eecfba0
+
+HW:
+https://docs.google.com/forms/d/10qvIhQUE3uzl6p6dWd9sq8aH-HaGilx8QAKXd48vUyM/viewform?edit_requested=true

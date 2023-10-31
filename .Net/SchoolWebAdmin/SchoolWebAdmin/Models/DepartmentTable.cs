@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SchoolWebAdmin.Models;
+﻿namespace SchoolWebAdmin.Models;
 
 public partial class DepartmentTable
 {

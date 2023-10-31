@@ -5,10 +5,9 @@ namespace SchoolWebAdmin.Services.Interfaces
     public interface IStudentService
     {
         Task<List<StudentTable>> GetStudentAsync();
-        void AddStudent(StudentTable student);
-        void UpdateStudent(int id, string Name, int DepartmentID, int Age, int Semester);
-        void DeleteStudent(int id);
-        void UpdateStudent(int id, string name);
+        Task AddStudentAsync(StudentTable student);
+        Task UpdateStudentAsync(int id, string Name, int DepartmentID, int Age, int Semester);
+        Task DeleteStudentAsync(int id);
         void AddStudent(DepartmentTable student);
         Task<StudentTable> GetStudentByIdAsync(int id);
     }

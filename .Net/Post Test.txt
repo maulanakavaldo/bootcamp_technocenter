@@ -1,0 +1,193 @@
+Dalam konteks .NET Core, apa yang dimaksud dengan Kestrel?
+*
+Sebuah bahasa pemrograman
+Sebuah web server yang ringan
+Sebuah jenis basis data
+Sebuah alat pengujian unit
+
+
+Dalam konteks .NET Core, Kestrel adalah sebuah web server yang ringan. Itu adalah bagian dari infrastruktur web pada platform .NET Core dan digunakan sebagai server bawaan untuk meng-host aplikasi web .NET Core.
+
+
+
+
+
+Apa yang dimaksud Entity Framework Core Code-First?'
+*
+Memodelkan basis data terlebih dahulu, lalu menghasilkan kode entitas
+Menghasilkan basis data dari kode entitas
+Menggunakan kode C# sebagai kode SQL
+Membangun kode C# dari kode SQL
+
+Entity Framework Core Code-First adalah pendekatan dalam pengembangan aplikasi menggunakan Entity Framework Core di mana kita memodelkan basis data terlebih dahulu dengan menggunakan kode C# untuk mendefinisikan entitas dan hubungan antar entitas. Setelah itu, basis data akan dibuat secara otomatis berdasarkan model tersebut. Jadi, jawabannya adalah: "Memodelkan basis data terlebih dahulu, lalu menghasilkan kode entitas."
+
+
+
+
+
+Apa peran Dependency Injection di dalam aplikasi .NET Core?
+*
+Membuat aplikasi menjadi lebih kompleks
+Mengelola komponen aplikasi dan mengelola dependensi
+Mengenkapsulasi logika bisnis
+Menyediakan antarmuka pengguna (UI)
+
+Peran Dependency Injection (DI) di dalam aplikasi .NET Core adalah "Mengelola komponen aplikasi dan mengelola dependensi." Dependency Injection membantu menyederhanakan manajemen objek dan ketergantungan antar komponen dalam aplikasi dengan menyediakan cara untuk menyuntikkan (inject) dependensi ke dalam objek atau kelas. Ini membantu meningkatkan fleksibilitas, memudahkan pengujian, dan memisahkan konsern dalam pengembangan perangkat lunak.
+
+
+
+
+
+Dalam ASP .NET Core apa yang dimaksud dengan Razor Pages?
+*
+Sebuah teknologi untuk menghasilkan kode HTML dinamis
+Sebuah kerangka kerja Javascript
+Sebuah alat pengujian performa
+Sebuah jenis server web
+
+Dalam ASP.NET Core, Razor Pages adalah "Sebuah teknologi untuk menghasilkan kode HTML dinamis." Razor Pages menyediakan cara yang intuitif dan ringkas untuk menghasilkan tampilan (views) dalam aplikasi web ASP.NET Core dengan menggunakan sintaks Razor untuk menuliskan HTML bersama dengan kode C#.
+
+
+
+
+
+Apa yang dilakukan oleh perintah dotnet ef migrations add dalam Entity Framework Core?
+*
+Membuat migrasi basis data baru
+Menghapus migrasi basis data
+Menjalankan migrasi basis data
+Mengkompilasi kode entitas
+
+Perintah dotnet ef migrations add dalam Entity Framework Core digunakan untuk "membuat migrasi basis data baru." Migrasi adalah cara untuk mengelola perubahan skema basis data, dan perintah ini digunakan untuk menambahkan snapshot perubahan yang dibuat dalam model entitas ke dalam basis data.
+
+
+
+
+
+Bagaimana Anda mengonfigurasi layanan middleware dalam aplikasi ASP .NET Core?
+*
+Dalam file .csproj
+Dalam file Startup.cs
+Dalam file appsettings.json
+Dalam file Program.cs
+
+Anda mengonfigurasi layanan middleware dalam aplikasi ASP.NET Core di dalam file Startup.cs. Di dalam kelas Startup, terdapat metode Configure yang dapat Anda gunakan untuk menentukan urutan dan konfigurasi middleware yang akan digunakan oleh aplikasi Anda.
+
+
+
+
+
+Apa yang dimaksud model MVC (Model-View-Controller) dalam aplikasi ASP .NET Core?
+*
+Sebuah kerangka kerja untuk membangun aplikasi lintas platform
+Sebuah pola desain yang memisahkan komponen aplikasi menjadi tiga bagian :  Model, View, dan Controller
+Sebuah perangkat keras komputer
+Sebuah jenis database
+
+Model-View-Controller (MVC) dalam aplikasi ASP.NET Core adalah "Sebuah pola desain yang memisahkan komponen aplikasi menjadi tiga bagian: Model, View, dan Controller." Ini adalah pendekatan yang membantu dalam memisahkan logika bisnis, presentasi, dan logika navigasi dalam suatu aplikasi, sehingga mempermudah pengembangan, pemeliharaan, dan pengujian aplikasi.
+
+
+
+
+
+Bagaimana Anda mengatasi masalah serangan (Attack) CSRF (Cross-Site Request Forgery) dalam aplikasi ASP .NET Core?
+*
+Dengan menggunakan HTTPS
+Dengan mengaktifkan Windows Firewall
+Dengan mengatur konfigurasi CORS (Cross-Origin Resource Sharing)
+Dengan menggunakan atribut [ValidateAntiForgeryToken]
+
+Untuk mengatasi masalah serangan CSRF (Cross-Site Request Forgery) dalam aplikasi ASP.NET Core, Anda dapat menggunakan atribut [ValidateAntiForgeryToken]. Atribut ini digunakan untuk mencegah serangan CSRF dengan memvalidasi bahwa permintaan POST yang diterima oleh server memiliki token valid yang sesuai dengan token yang disematkan dalam formulir atau permintaan.
+
+Jadi jawabannya adalah "Dengan menggunakan atribut [ValidateAntiForgeryToken]."
+
+
+
+
+
+Apa yang dimaksud dengan Identity Framework dalam ASP .NET Core?
+*
+Sebuah kerangka kerja untuk mengelola identitas pengguna, otentikasi dan otorisasi
+Sebuah alat untuk membuat diagram aliran data
+Sebuah bahasa pemrograman
+Sebuah jenis server basis data
+
+Identity Framework dalam ASP.NET Core adalah "Sebuah kerangka kerja untuk mengelola identitas pengguna, otentikasi, dan otorisasi." Identity Framework menyediakan fungsi dan fitur yang memudahkan pengembang untuk mengelola informasi identitas pengguna, mengelola proses otentikasi, dan mengatur izin atau otorisasi dalam aplikasi web ASP.NET Core.
+
+
+
+
+
+Bagaimana Anda menjalankan migrasi basis data dalam Entity Framework Core?
+*
+Dengan menggunakan perintah dotnet build
+Dengan menggunakan perintah dotnet ef database update
+Dengan menyalin file basis data secara manual
+Dengan menginstal ulang Entity Framework Core
+
+Anda menjalankan migrasi basis data dalam Entity Framework Core dengan menggunakan perintah dotnet ef database update. Perintah ini akan menerapkan migrasi yang tertunda dan memperbarui skema basis data sesuai dengan definisi model entitas terbaru.
+
+
+
+
+
+Apa yang dimaksud dengan model obyek dalam konteks Entity Framework Core?
+*
+Model matematis yang digunakan untuk analisis data
+Kode yang digunakan untuk mengakses basis data
+Model visual yang digunakan untuk merancang antarmuka pengguna
+Sebuah jenis diagram aliran data
+
+Dalam konteks Entity Framework Core, "model obyek" mengacu pada kode yang digunakan untuk mengakses dan merepresentasikan struktur data dalam basis data sebagai objek dalam bahasa pemrograman, seperti C#. Ini mencakup definisi kelas-kelas entitas, properti-properti, dan hubungan antar entitas yang merefleksikan skema basis data. Jadi, jawabannya adalah "Kode yang digunakan untuk mengakses basis data."
+
+
+
+
+
+Bagaimana Anda dapat menangani kesalahan (error) dalam aplikasi ASP.NET Core?
+*
+Dengan mengabaikannya
+Dengan menampilkan pesan kesalahan yang singkat
+Dengan menggunakan perintah dotnet error
+Dengan menghentikan aplikasi secara tiba-tiba
+
+Anda dapat menangani kesalahan (error) dalam aplikasi ASP.NET Core dengan menampilkan pesan kesalahan yang singkat dan memberikan tanggapan yang sesuai. Ini dapat dilakukan dengan mengonfigurasi penanganan kesalahan dalam metode Configure di kelas Startup. Dengan cara ini, Anda dapat memberikan respons yang jelas kepada pengguna dan mencatat informasi kesalahan untuk pemantauan dan pemecahan masalah lebih lanjut. Jadi, jawabannya adalah "Dengan menampilkan pesan kesalahan yang singkat."
+
+
+
+
+
+Apa yang dimaksud dengan ASP.NET Core Identity?
+*
+Sebuah kerangka kerja untuk membangun aplikasi web
+Sebuah kerangka kerja untuk mengelola identitas pengguna, otentikasi, dan otorisasi dalam aplikasi web
+Sebuah bahasa pemrograman
+Sebuah jenis server web
+
+ASP.NET Core Identity adalah "Sebuah kerangka kerja untuk mengelola identitas pengguna, otentikasi, dan otorisasi dalam aplikasi web." Ini menyediakan solusi lengkap untuk manajemen pengguna, pengelolaan otentikasi, dan kontrol akses dalam aplikasi web ASP.NET Core. Dengan menggunakan ASP.NET Core Identity, pengembang dapat dengan mudah mengintegrasikan fitur-fitur keamanan seperti registrasi pengguna, login, konfirmasi email, reset password, dan manajemen peran ke dalam aplikasi mereka.
+
+
+
+
+
+Bagaimana Anda dapat mengkonsumsi layanan RESTful API dalam aplikasi .NET Core?
+*
+Dengan menggunakan SOAP
+Dengan mengirimkan email
+Dengan menggunakan perintah dotnet consume
+Dengan menggunakan HttpClient
+
+Anda dapat mengkonsumsi layanan RESTful API dalam aplikasi .NET Core dengan menggunakan kelas HttpClient. HttpClient memungkinkan aplikasi Anda untuk membuat permintaan HTTP ke layanan API, mengirimkan permintaan, dan menerima respons. Dengan menggunakan HttpClient, Anda dapat melakukan operasi HTTP seperti GET, POST, PUT, dan DELETE untuk berinteraksi dengan layanan API. Jadi, jawabannya adalah "Dengan menggunakan HttpClient."
+
+
+
+
+
+Apa yang dimaksud dengan Docker dalam konteks .NET Core?
+*
+Sebuah alat untuk mengelola basis data
+Sebuah jenis bahasa pemrograman
+Sebuah platform untuk mengemas dan menjalankan aplikasi dalam kontainer
+Sebuah alat untuk menguji performa aplikasi
+
+Dalam konteks .NET Core, Docker adalah "Sebuah platform untuk mengemas dan menjalankan aplikasi dalam kontainer." Docker memungkinkan Anda membuat, mendistribusikan, dan menjalankan aplikasi dalam lingkungan kontainer yang dapat diisolasi. Ini membantu dalam memastikan bahwa aplikasi dapat berjalan dengan konsisten di berbagai lingkungan, dari pengembangan hingga produksi.

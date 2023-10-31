@@ -8,12 +8,23 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+//api
+builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddDbContext<SchoolDatabaseContext>(service =>
 service.UseSqlServer(builder.Configuration.GetConnectionString("DefaultString")));
 
 //Register
-builder.Services.AddScoped<IDepartmentService, DepartmentServices>();
-builder.Services.AddScoped<IStudentService, StudentServices>();
+
+builder.Services.AddHttpClient<IDepartmentService, DepartmentServices>(c =>
+c.BaseAddress = new Uri("https://localhost:7116/"));
+
+builder.Services.AddHttpClient<IStudentService, StudentServices>(c =>
+c.BaseAddress = new Uri("https://localhost:7116/"));
+
+
+//builder.Services.AddScoped<IDepartmentService, DepartmentServices>();
+//builder.Services.AddScoped<IStudentService, StudentServices>();
 
 var app = builder.Build();
 

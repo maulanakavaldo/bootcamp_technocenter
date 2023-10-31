@@ -17,16 +17,18 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Department ID</th>
+                    <th>No.</th>
+                    @* <th>Department ID</th> *@
                     <th>Department Name</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var department in Model)
+                @foreach (var (index, department) in Model.Select((value, i) => (i + 1, value)))
                 {
                     <tr>
-                        <td>@department.DepartmentId</td>
+                        <td>@index</td>
+                        @* <td>@department.DepartmentId</td> *@
                         <td>@department.DepartmentName</td>
                         <td>
                             <a asp-asp-controller="Department" asp-route-id="@department.DepartmentId" asp-action="UpdateDepartment"> Update</a>
